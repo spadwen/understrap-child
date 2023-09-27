@@ -16,3 +16,28 @@
 		) );
 	});
 })();
+/*
+* initial the Carousel
+*/
+jQuery(document).ready(function($) {
+    $('#myCarousel').carousel(); // Replace 'myCarousel' with the ID of your carousel element.
+});
+
+/*
+* make the Carousel running every 5 seconds
+*/
+jQuery(document).ready(function($) {
+    // Set the interval for automatic sliding (5 seconds in milliseconds)
+    var carouselInterval = 5000;
+
+    // Initialize the carousel
+    $('#myCarousel').carousel();
+
+    // Create a function to automatically advance the carousel
+    function autoAdvanceCarousel() {
+        $('#myCarousel').carousel('next');
+    }
+
+    // Set an interval to trigger the automatic slide change
+    setInterval(autoAdvanceCarousel, carouselInterval);
+});

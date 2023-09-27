@@ -8,7 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
@@ -92,3 +93,55 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+
+/**
+ * Loads Boodstrap libraries.
+ */
+function enqueue_bootstrap() {
+    // Enqueue Bootstrap CSS
+ //   wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+   //wp_enqueue_style('bootstrap-css', 'vendor/twbs/bootstrap/dist/css/bootstrap.min.css');
+    // Enqueue Bootstrap JavaScript
+ //   wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array('jquery'), '4.5.2', true);
+	//wp_enqueue_script('bootstrap-js', 'vendor/twbs/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '4.5.2', true);
+//	wp_enqueue_script('customizer-controls-js', 'js/customizer-control.js', array('jquery'), '4.5.2', true);
+// Enqueue Bootstrap CSS
+// Enqueue Bootstrap CSS
+wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri() . '/vendor/twbs/bootstrap/dist/css/bootstrap.min.css');
+    
+// Enqueue Bootstrap JavaScript
+wp_enqueue_script('jquery');
+wp_enqueue_script('bootstrap-js', get_stylesheet_directory_uri() . '/vendor/twbs/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '5.3.2', true);
+//wp_enqueue_script('bootsstrap-carousel-js', get_stylesheet_directory_uri() . '/vendor/twbs/bootstrap/js/dist/carousel.js', array('jquery'), '4.6.2', true);
+
+wp_enqueue_script('customizer-controls-js', get_stylesheet_directory_uri() . '/js/customizer-control.js', array('jquery'), '1.0.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+
+/*
+*  add carousel hook based on template-carousel.php
+
+
+function custom_carousel() {
+    // Output the carousel HTML from template-carousel.php
+    ob_start();
+  // include(get_template_directory() . '/template-carousel.php');
+    include(get_stylesheet_directory() . '/template-carousel.php');
+
+    echo ob_get_clean();
+}
+
+function add_custom_carousel_after_content($content) {
+    // Check if it's a single post
+    if (is_single()) {
+        // Append the custom carousel after the post content
+        $content .= custom_carousel();
+    }
+    return $content;
+}
+add_filter('the_content', 'add_custom_carousel_after_content');
+*/
+
