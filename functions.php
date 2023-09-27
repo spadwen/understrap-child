@@ -100,14 +100,7 @@ add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_co
  * Loads Boodstrap libraries.
  */
 function enqueue_bootstrap() {
-    // Enqueue Bootstrap CSS
- //   wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
-   //wp_enqueue_style('bootstrap-css', 'vendor/twbs/bootstrap/dist/css/bootstrap.min.css');
-    // Enqueue Bootstrap JavaScript
- //   wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array('jquery'), '4.5.2', true);
-	//wp_enqueue_script('bootstrap-js', 'vendor/twbs/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '4.5.2', true);
-//	wp_enqueue_script('customizer-controls-js', 'js/customizer-control.js', array('jquery'), '4.5.2', true);
-// Enqueue Bootstrap CSS
+
 // Enqueue Bootstrap CSS
 wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri() . '/vendor/twbs/bootstrap/dist/css/bootstrap.min.css');
     
