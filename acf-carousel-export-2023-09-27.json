@@ -1,12 +1,12 @@
 [
     {
-        "key": "group_6510e34224c3c",
-        "title": "carousel_items",
+        "key": "group_65125886480b5",
+        "title": "accordion_items",
         "fields": [
             {
-                "key": "field_6510e342af5cc",
-                "label": "Sliders",
-                "name": "Sliders",
+                "key": "field_651258860c842",
+                "label": "accordion_items",
+                "name": "accordion_items",
                 "aria-label": "",
                 "type": "repeater",
                 "instructions": "",
@@ -17,7 +17,7 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "block",
+                "layout": "table",
                 "pagination": 0,
                 "min": 0,
                 "max": 0,
@@ -26,8 +26,112 @@
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_6510f4a34e4f6",
-                        "label": "carousel title",
+                        "key": "field_65125a2664a6a",
+                        "label": "accordion_title",
+                        "name": "accordion_title",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_651258860c842"
+                    },
+                    {
+                        "key": "field_651259afbd304",
+                        "label": "accordion_content",
+                        "name": "accordion_content",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "placeholder": "",
+                        "new_lines": "",
+                        "parent_repeater": "field_651258860c842"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ],
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "top_level"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_6514eff650630",
+        "title": "Carousel_items",
+        "fields": [
+            {
+                "key": "field_6514eff6d34e1",
+                "label": "carousel_items",
+                "name": "carousel_items",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_6514f034d34e2",
+                        "label": "carousel_title",
                         "name": "carousel_title",
                         "aria-label": "",
                         "type": "text",
@@ -44,11 +148,11 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_6510e342af5cc"
+                        "parent_repeater": "field_6514eff6d34e1"
                     },
                     {
-                        "key": "field_6510f4cbdabc4",
-                        "label": "Carousel Caption",
+                        "key": "field_6514f06471a86",
+                        "label": "carousel_caption",
                         "name": "carousel_caption",
                         "aria-label": "",
                         "type": "text",
@@ -65,11 +169,11 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_6510e342af5cc"
+                        "parent_repeater": "field_6514eff6d34e1"
                     },
                     {
-                        "key": "field_6510f4e62c2ea",
-                        "label": "Carousel Image",
+                        "key": "field_6514f07271a87",
+                        "label": "carousel_image",
                         "name": "carousel_image",
                         "aria-label": "",
                         "type": "image",
@@ -91,7 +195,7 @@
                         "max_size": "",
                         "mime_types": "",
                         "preview_size": "medium",
-                        "parent_repeater": "field_6510e342af5cc"
+                        "parent_repeater": "field_6514eff6d34e1"
                     }
                 ]
             }

@@ -60,7 +60,36 @@ get_header();
         </div>
 
 
+<!-- Accordion Section -->
+<div class="accordion-container">
+                <?php
+                // Retrieve accordion data
+                $accordion_items = get_field('accordion_items');
+                
+                if ($accordion_items) :
+                ?>
+                <div class="accordion" id="accordionExample">
+                    <?php foreach ($accordion_items as $key => $accordion_item) : ?>
+                        <div class="card">
+                            <div class="card-header" id="heading<?php echo $key; ?>">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse<?php echo $key; ?>">
+                                        <?php echo esc_html($accordion_item['accordion_title']); ?>
+                                    </button>
+                                </h2>
+                            </div>
 
+                            <div id="collapse<?php echo $key; ?>" class="collapse" aria-labelledby="heading<?php echo $key; ?>" data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <?php echo esc_html($accordion_item['accordion_content']); ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
+            </div>
+            <!-- End Accordion Section -->
         
 
     </main>
