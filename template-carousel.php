@@ -61,6 +61,7 @@ get_header();
 
 
 <!-- Accordion Section -->
+<h1> Accordion Bootstrap 5</h1>
 <div class="accordion-container">
                 <?php
                 // Retrieve accordion data
@@ -91,6 +92,25 @@ get_header();
             </div>
             <!-- End Accordion Section -->
         
+            <!-- Countdown Section -->
+            <h1>CountDown</h1>
+            <?php
+// Retrieve the ACF field value
+$countdown_date = get_field('countdown'); // Use the field name 'countdown' as defined in your ACF JSON
+
+// Check if the ACF field has a value
+if ($countdown_date) {
+    echo '<div id="countdown" data-countdown="' . esc_attr($countdown_date) . '"></div>';
+} else {
+    echo "Countdown date not set.";
+}
+?>
+
+
+
+
+
+            <!-- End Countdown Section -->
 
     </main>
 </div>
