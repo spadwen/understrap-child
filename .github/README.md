@@ -18,6 +18,7 @@ Full documentation for this starter theme is available at [docs.understrap.com](
 ## Add Carousel Template with ACF carousel_items
 - template-carousel.php
 - need to install/active ACF Pro plugin, then import acf-carousel-export-2023-09-27.json
+- added Accordion Bootstrap and CountDown JavaScript with ACF Pro plugin on 28 Sept 2023, needs to import latest version of acf-carousel-export-2023-09-27.json which including Accordion and CountDown
 
 
 ## Bootstrap 5.3 Support
